@@ -490,6 +490,9 @@ h6 {
 .nav-address-footer:focus {
   color: var(--hover-font-color);
 }
+.footer-social {
+  margin-right: 93px;
+}
 .footer-header {
   margin-top: 12px;
   margin-bottom: 20px;
@@ -524,6 +527,18 @@ h6 {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--hover-font-color);
+}
+.noname {
+  display: flex;
+}
+.email > input {
+  /* display: block; */
+  width: 350px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: inherit;
 }
 
 /* ----------------- PAGE PORTFOLIO -----------------*/
