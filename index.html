@@ -573,13 +573,13 @@
         </div>
         <div class="footer-form">
           <h2 class="footer-header">Подпишитесь на рассылку</h2>
-          <form class="noname">
-            <label class="email">
+          <form class="footer-subscribe">
+            <label class="form-fild-subscribe">
               <input type="email" name="email" placeholder="E-mail" />
             </label>
-            <button type="submit" class="button">
+            <button type="submit" class="subscribe-btn">
               Подписаться
-              <svg width="24" height="24">
+              <svg class="icon-send" width="24" height="24">
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
             </button>
@@ -595,6 +595,42 @@
             <use href="./images/sprite.svg#icon-close-1"></use>
           </svg>
         </button>
+        <form class="form-order">
+          <h2 class="form-order-header">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+          <label class="fild-form name">
+            Имя
+            <input type="text" name="name" />
+            <svg class="icon-form icon-name" width="18" height="18">
+              <use href="./images/sprite.svg#icon-person"></use>
+            </svg>
+          </label>
+          <label class="fild-form tel">
+            Телефон
+            <input type="tel" name="tel" />
+            <svg class="icon-form icon-tel" width="18" height="18">
+              <use href="./images/sprite.svg#icon-phone2"></use>
+            </svg>
+          </label>
+          <label class="fild-form mail">
+            Почта
+            <input type="email" name="mail" />
+            <svg class="icon-form icon-mail" width="18" height="18">
+              <use href="./images/sprite.svg#icon-email2"></use>
+            </svg>
+          </label>
+          <label class="fild-form text">
+            Комментарий
+            <textarea name="text" placeholder="Введите текст"></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="policy" />
+            <p>Соглашаюсь с рассылкой и принимаю</p>
+            <a href="#" class="">Условия договора</a>
+          </label>
+          <button type="submit" class="button">Отправить</button>
+        </form>
       </div>
     </div>
     <!-- ~~~~~~~~~~~~ INCLUDE JS ~~~~~~~~ -->
