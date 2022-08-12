@@ -592,48 +592,65 @@
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="icon-close" width="18" height="18">
-            <use href="./images/sprite.svg#icon-close-1"></use>
+            <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <form class="form-order">
           <h2 class="form-order-header">
             Оставьте свои данные, мы вам перезвоним
           </h2>
-          <label class="fild-form name">
-            Имя
+          <label class="form-fild name">
+            <span class="fild-name">Имя</span>
             <input type="text" name="name" />
-            <svg class="icon-form icon-name" width="18" height="18">
+            <svg class="icon-form icon-name">
               <use href="./images/sprite.svg#icon-person"></use>
             </svg>
           </label>
-          <label class="fild-form tel">
-            Телефон
+          <label class="form-fild tel">
+            <span class="fild-name">Телефон</span>
             <input type="tel" name="tel" />
-            <svg class="icon-form icon-tel" width="18" height="18">
+            <svg class="icon-form icon-tel">
               <use href="./images/sprite.svg#icon-phone2"></use>
             </svg>
           </label>
-          <label class="fild-form mail">
-            Почта
+          <label class="form-fild mail">
+            <span class="fild-name">Почта</span>
             <input type="email" name="mail" />
-            <svg class="icon-form icon-mail" width="18" height="18">
+            <svg class="icon-form icon-mail">
               <use href="./images/sprite.svg#icon-email2"></use>
             </svg>
           </label>
-          <label class="fild-form text">
-            Комментарий
+          <label class="form-fild text">
+            <span class="fild-name">Комментарий</span>
             <textarea name="text" placeholder="Введите текст"></textarea>
           </label>
-          <label class="check">
-            <input type="checkbox" name="policy" />
-            <p>Соглашаюсь с рассылкой и принимаю</p>
-            <a href="#" class="">Условия договора</a>
+
+          <label class="label">
+            <input class="checkbox" type="checkbox" name="policy" />
+            <span class="castom-checkbox"></span>
+            <span class="terms"> Соглашаюсь с рассылкой и принимаю </span>
+            <a href="#" target="_blank" class="link-policy">Условия договора</a>
           </label>
-          <button type="submit" class="button">Отправить</button>
+
+          <button type="submit" class="button form-btn">Отправить</button>
         </form>
       </div>
     </div>
     <!-- ~~~~~~~~~~~~ INCLUDE JS ~~~~~~~~ -->
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector(".form-order")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
