@@ -881,6 +881,9 @@ textarea {
   border-color: #2196f3;
   background-image: url(../images/check.svg);
 }
+.terms {
+  color: var(--secondary-font-color);
+}
 .link-policy {
   margin-left: 3px;
 
