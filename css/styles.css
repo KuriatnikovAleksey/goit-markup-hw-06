@@ -881,6 +881,9 @@ textarea {
   border-color: #2196f3;
   background-image: url(../images/check.svg);
 }
+.checkbox:focus + .castom-checkbox {
+  border-color: #2196f3;
+}
 .terms {
   color: var(--secondary-font-color);
 }
